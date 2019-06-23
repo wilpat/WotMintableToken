@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BuyCoins Challenge</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/app.css">
+	<style>
+		form{
+			min-width: 550px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" style="width: 650px">
+		<div class="row text-center" >
+			<div class="col-lg-12">
+				<h1>
+					WilliamOkaforToken(WOT)
+				</h1>
+				<hr>
+				<br>
+			</div>
+			<div id="loader">
+				<p class="text-center">Loading...</p>
+			</div>
+
+			<div id="loader1" style="display: none">
+				<p class="text-center">Please wait while transaction gets mined.</p>
+			</div>
+			<div id="content" style="display: none">
+				<p>
+					Introducing the WOT. <br>
+					<hr>
+					<span id="coinbase"></span>
+				</p>
+				<br>
+				<form id="mint" onsubmit="App.mintTokens(); return false;" role = "form">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="number" id="numberOfTokens" class="form-control input-lg" value="1" min="1" name="number" pattern="[0-9]">
+							<span class="input-group-btn">
+								<button class="btn btn-primary">
+									Mint Tokens
+								</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<p>
+					Current Minter:
+				</p>
+				<form id="updateMinter" onsubmit="App.updateMinter(); return false;" role = "form">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" id="minter" class="form-control input-lg">
+							<span class="input-group-btn">
+								<button class="btn btn-primary">
+									Change Minter
+								</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				<hr>
+				<p>Available tokens: <span id="tokensAvalaible"></span></p>
+			</div>
+		</div>
+	</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
