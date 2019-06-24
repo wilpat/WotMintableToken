@@ -7,7 +7,9 @@ First clone this repo
 ### Pull in dependencies
   Use yarn or npm for this.
 ### Set up credentials
-  - I used infura to deployed this smart contract to the rinkeby test net and I've made it availabe here. Nevertheless, you can use yours by editing the `.infura_rinkeby_endpoint` file
+  - I used infura to deployed this smart contract to the rinkeby test net and I've made the endpoint availabe here. 
+  
+  Nevertheless, you can use yours by editing the `.infura_rinkeby_endpoint` file
   - Replace the contents of `.secret` with your mnemonic to connect to your rinkeby wallet
   
 ### Deploy
